@@ -33,7 +33,6 @@ router.get('/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
 });
 
 router.post('/', async (req, res) => {
@@ -44,7 +43,6 @@ router.post('/', async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
-
 });
 
 router.put('/:id', async (req, res) => {
@@ -60,7 +58,6 @@ router.put('/:id', async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
-
 });
 
 router.delete('/:id', async (req, res) => {
@@ -73,7 +70,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!tagData) {
-      res.status(404).json({ message: 'No tag card found with that id!' });
+      res.status(404).json({ message: 'No tag found with that id!' });
       return;
     }
 
@@ -81,7 +78,6 @@ router.delete('/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
 });
 
 module.exports = router;
